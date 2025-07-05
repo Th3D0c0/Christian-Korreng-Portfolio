@@ -1,5 +1,5 @@
 # Hi there, I'm John Doe 👋
-<img align="right" src="https://placehold.co/250x250/1a202c/9ca3af?text=Your+Image+Here" alt="A placeholder image for the portfolio" width="250" style="border-radius:50%;" />
+<img align="right" src="Res/Img/Christian_Korreng2.jPG" alt="A placeholder image for the portfolio" width="250" style="border-radius:50%;" />
 
 A Passionate Full-Stack Developer Crafting Beautiful and Functional Web Experiences.
 I'm a developer based in New York, with a passion for building digital solutions. My journey in web development started years ago, and since then, I've been honing my skills in creating intuitive, dynamic user interfaces and robust back-end systems. I thrive on turning complex problems into simple, beautiful, and intuitive designs.
