@@ -2,21 +2,17 @@
 <img src="./Res/Img/Christian_Korreng2.jpg" alt="drawing" width="200"/>
 
 
-A Passionate Full-Stack Developer Crafting Beautiful and Functional Web Experiences.
-I'm a developer based in New York, with a passion for building digital solutions. My journey in web development started years ago, and since then, I've been honing my skills in creating intuitive, dynamic user interfaces and robust back-end systems. I thrive on turning complex problems into simple, beautiful, and intuitive designs.
+A Student of Games and Immersive Media at Hochschule Furtwangen.
+I am currently a student at Hochschule Furtwangen (HFU), pursuing a degree in Games and Immersive Media. My passion lies in creating engaging interactive experiences, from video games to virtual reality applications. I am always eager to learn new technologies and apply my skills to build the digital worlds of the future.
 
 🔧 Tech Stack & Tools
 Here are a few technologies I've been working with recently:
 
-Frontend: React, Next.js, HTML5, CSS3, Tailwind CSS, JavaScript (ES6+)
+Frontend: HTML, CSS, JavaScript 
 
-Backend: Node.js, Express.js, GraphQL
 
-Databases: MongoDB, Firebase, PostgreSQL
+Tools: Git, GitHub
 
-Tools: Git, GitHub, Docker, Webpack, Vercel
-
-You can also use icons for a more visual representation:
 
 <p align="left">
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
@@ -61,5 +57,7 @@ Have a question or want to work together? Feel free to reach out!
 <a href="https://github.com/your-username" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="your-username" height="30" width="40" /></a>
 <a href="https://twitter.com/your-username" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="your-username" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/your-username" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="your-username" height="30" width="40" /></a>
+<a href="mailto:your.email@example.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/gmail.svg" alt="your-email" height="30" width="40" /></a>
+</p>usercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="your-username" height="30" width="40" /></a>
 <a href="mailto:your.email@example.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/gmail.svg" alt="your-email" height="30" width="40" /></a>
 </p>
