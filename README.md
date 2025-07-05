@@ -35,30 +35,12 @@ Description
 
 Links
 
-E-commerce Platform
-
-A full-featured e-commerce site built with Next.js, Stripe for payments, and Sanity for content management.
-
-Code / Live Demo
-
-Real-time Chat App
-
-A chat application using Socket.IO for real-time communication and React for the front-end interface.
-
-Code / Live Demo
-
-Data Viz Dashboard
-
-An interactive dashboard for visualizing complex datasets using D3.js and React, with a focus on performance.
-
-Code / Live Demo
 
 📫 Get In Touch
 Have a question or want to work together? Feel free to reach out!
 
 <p align="left">
-<a href="https://github.com/your-username" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="your-username" height="30" width="40" /></a>
-<a href="https://twitter.com/your-username" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="your-username" height="30" width="40" /></a>
+<a href="https://x.com/chrisinator3000" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="your-username" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/your-username" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="your-username" height="30" width="40" /></a>
 <a href="mailto:your.email@example.com" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/gmail.svg" alt="your-email" height="30" width="40" /></a>
 </p>usercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="your-username" height="30" width="40" /></a>
