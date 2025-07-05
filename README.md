@@ -42,4 +42,5 @@ Have a question or want to work together? Feel free to reach out!
 <a href="https://linkedin.com/in/your-username" target="_blank"><img align="center" src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=FFFFFF" alt="your-username" height="60" width="60" /></a>
 <a href="https://x.com/@chrisinator3000" target="_blank"><img align="center" src="https://img.icons8.com/?size=100&id=6Fsj3rv2DCmG&format=png&color=FFFFFF" alt="your-username" height="60" width="60" /></a>
 <a href="mailto:cmkorreng@gmail.com" target="_blank"><img align="center" src="https://img.icons8.com/?size=100&id=53388&format=png&color=FFFFFF" alt="your-email" height="60" width="60" /></a>
+<a href="https://discord.com/users/256726718050598912" target="_blank"><img align="center" src="https://img.icons8.com/?size=100&id=25627&format=png&color=FFFFFF" alt="your-discord" height="60" width="60" /></a>
 </p>
