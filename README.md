@@ -2,8 +2,8 @@
 <img src="./Res/Img/Christian_Korreng2.jpg" alt="drawing" width="200"/>
 
 
-A Student of Games and Immersive Media at Hochschule Furtwangen.
-I am currently a student at Hochschule Furtwangen (HFU), pursuing a degree in Games and Immersive Media. My passion lies in creating engaging interactive experiences, from video games to virtual reality applications. I am always eager to learn new technologies and apply my skills to build the digital worlds of the future.
+### A Student of Games and Immersive Media at Hochschule Furtwangen.
+#### I am currently a student at Hochschule Furtwangen (HFU), pursuing a degree in Games and Immersive Media. My passion lies in creating engaging interactive experiences, from video games to virtual reality applications. I am always eager to learn new technologies and apply my skills to build the digital worlds of the future.
 --------------------------------------------------------------------
 ## 🔧 Tech Stack & Tools: Here are a few technologies I've been working with recently:
 
@@ -14,16 +14,15 @@ Game Development: Unreal Engine 5
 
 Design: Blender, Asprite, Substance Painter
 
-Tools: Git, GitHub
+Tools: Git, GitHub, Visual Studio Code
 
 
 <p align="left">
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
-<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
-<a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/> </a>
-<a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a>
-<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a>
-<a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
+<a href="https://www.unrealengine.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unrealengine/unrealengine-original.svg" alt="unrealengine" width="40" height="40"/> </a>
+<a href="https://isocpp.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a>
+<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git" width="40" height="40"/> </a>
+<a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="vscode" width="40" height="40"/> </a>
+<a href="https://www.blender.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/blender/blender-original.svg" alt="blender" width="40" height="40"/> </a>
 </p>
 
 ---------------------------------------------------------------------------------------------
