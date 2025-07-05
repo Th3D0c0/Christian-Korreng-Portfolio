@@ -4,12 +4,15 @@
 
 A Student of Games and Immersive Media at Hochschule Furtwangen.
 I am currently a student at Hochschule Furtwangen (HFU), pursuing a degree in Games and Immersive Media. My passion lies in creating engaging interactive experiences, from video games to virtual reality applications. I am always eager to learn new technologies and apply my skills to build the digital worlds of the future.
+--------------------------------------------------------------------
+## 🔧 Tech Stack & Tools: Here are a few technologies I've been working with recently:
 
-🔧 Tech Stack & Tools
-Here are a few technologies I've been working with recently:
 
 Frontend: HTML, CSS, JavaScript 
 
+Game Development: Unreal Engine 5
+
+Design: Blender, Asprite, Substance Painter
 
 Tools: Git, GitHub
 
@@ -23,6 +26,7 @@ Tools: Git, GitHub
 <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
 </p>
 
+---------------------------------------------------------------------------------------------
 🚀 My Projects
 Here's some of the work I'm most proud of.
 
