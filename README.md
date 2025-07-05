@@ -3,9 +3,6 @@
 <h3 align="center">Currently Studying Games and Immersive Media at Hochschule Furtwangen</h3>
 
 <div align="center"> 
-    <img src="https://komarev.com/ghpvc/?username=iamzehan&label=Profile%20views&color=FF5233&style=flat" alt="iamzehan" /> 
-    <br>
-    <img src="https://github-profile-trophy.vercel.app/?username=iamzehan&theme=onedark" alt="iamzehan" />
 </div>
 
 <table align="center">
@@ -14,8 +11,7 @@
     </tr>
     <tr>
         <td>
-            <a href="https://twitter.com/i_am_zehan" target="_blank">
-                <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="i_am_zehan" height="30" width="40" />
+                [![X](image-url)](target-url)
             </a>
         </td>
         <td>
