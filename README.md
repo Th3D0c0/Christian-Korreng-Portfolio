@@ -1,5 +1,6 @@
-# Hi there, I'm John Doe 👋
-<img align="right" src="https://raw.githubusercontent.com/Th3D0c0/Christian-Korreng-Portfolio/main/res/IMG_3716.png" alt="A placeholder image for the portfolio" width="250" style="border-radius:50%;" />
+# Hi there, I'm Christian Korreng 👋
+<img src="./Res/Img/Christian_Korreng2.jpg" alt="drawing" width="200"/>
+
 
 A Passionate Full-Stack Developer Crafting Beautiful and Functional Web Experiences.
 I'm a developer based in New York, with a passion for building digital solutions. My journey in web development started years ago, and since then, I've been honing my skills in creating intuitive, dynamic user interfaces and robust back-end systems. I thrive on turning complex problems into simple, beautiful, and intuitive designs.
