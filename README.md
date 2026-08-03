@@ -8,7 +8,7 @@
 ### 🔧 Tech Stack & Tools: Here are a few technologies I've been working with recently:
 
 
-Languages: C++, C
+Languages: C++, C, GDScript (Godot), Java Script, Blueprints (Unreal Engine)
 
 Game Development: Godot, Unreal Engine 5
 
