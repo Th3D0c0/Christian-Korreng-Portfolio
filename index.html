@@ -1,61 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Style.css">
-    <script src="main.js"></script>
-</head>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="main-container">
-
-        <header class="portfolio-header">
-            <h1>My Portfolio</h1>
-            </header>
-
-        <section class="about-section">
-            <img src="Res/Img/rsz_christian_korreng2.jpg" alt="Profile Picture" class="profile-pic">
-            
-            <div class="about-text">
-                <h2>Hi, I'm Chris</h2>
-                <p>I am a passionate developer.</p>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Christian Korreng &mdash; Game Developer</title>
+        <meta name="description" content="Game developer based in Baden-W&uuml;rttemberg, Germany. Working with Godot, Unreal Engine and Blender, with a focus on graphics programming, 3D art and game audio.">
+        <meta name="author" content="Christian Korreng">
+        <meta name="theme-color" content="#1d4ed8">
+        <link rel="icon" href="favicon.svg" type="image/svg+xml">
+        <!-- Link preview cards. When the site is live, change the two URLs below to absolute
+             ones (https://yourdomain.com/...) - most scrapers will not resolve relative paths. -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Christian Korreng &mdash; Game Developer">
+        <meta property="og:description" content="Game developer based in Baden-W&uuml;rttemberg, Germany. Working with Godot, Unreal Engine and Blender, with a focus on graphics programming, 3D art and game audio.">
+        <meta property="og:image" content="Images/Christian_Korreng2.JPG">
+        <meta property="og:url" content="index.html">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Christian Korreng &mdash; Game Developer">
+        <meta name="twitter:description" content="Game developer based in Baden-W&uuml;rttemberg, Germany. Working with Godot, Unreal Engine and Blender, with a focus on graphics programming, 3D art and game audio.">
+        <meta name="twitter:image" content="Images/Christian_Korreng2.JPG">
+        <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
+        <style>/* Smooth in-page navigation */html { scroll-behavior: smooth; } /* Keep section headings clear of the sticky bar when jumped to */#home, #about, #works, #contact { scroll-margin-top: 5rem; } @media (prefers-reduced-motion: reduce) { html {  scroll-behavior: auto; } } /* Sticky top bar */.site-header { background-color: #fff; transition: box-shadow 0.2s ease; } .site-header.is-scrolled { box-shadow: 0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px rgb(0 0 0 / 0.06); } /* CV language dropdown */.cv-menu { position: relative; } .cv-menu-list { position: absolute; right: 0; top: calc(100% + 0.5rem); min-width: 100%; padding: 0.25rem; background: #fff; border: 1px solid #e5e7eb; border-radius: 0.375rem; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); z-index: 60; } .cv-menu-list[hidden] { display: none; } .cv-menu-item { display: block; width: 100%; padding: 0.5rem 0.75rem; border: 0; border-radius: 0.25rem; background: none; color: #374151; text-align: left; white-space: nowrap; cursor: pointer; } .cv-menu-item:hover, .cv-menu-item:focus-visible { background: #f3f4f6; color: #111827; } /* 3D model viewer */.model-viewer-wrap { position: relative; margin-bottom: 1.5rem; } .model-progress { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(20rem, 80%); z-index: 2; pointer-events: none; } .model-progress[hidden] { display: none; } .model-progress-track { height: 0.5rem; border-radius: 9999px; background: #e5e7eb; overflow: hidden; } .model-progress-fill { width: 0%; height: 100%; border-radius: 9999px; background: rgb(29 78 216); transition: width 0.15s linear; } .model-progress-label { margin-top: 0.5rem; font-size: 0.8rem; color: #6b7280; text-align: center; } .model-viewer-el { display: block; width: 100%; height: 24rem; background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 0.5rem; --poster-color: #f3f4f6; } .model-viewer-note { font-size: 0.8rem; color: #6b7280; margin-top: 0.375rem; } /* Audio sample players (used inside project modals) */.audio-sample { border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 0.75rem 1rem; margin-bottom: 0.75rem; } .audio-sample-title { color: #111827; font-weight: 500; margin-bottom: 0.5rem; } .audio-sample-player { width: 100%; display: block; } .audio-sample-volume { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.625rem; } .audio-sample-volume svg { width: 1.15rem; height: 1.15rem; flex: none; color: #6b7280; } .audio-sample-volume output { font-size: 0.8rem; color: #6b7280; min-width: 3ch; text-align: right; } /* Volume slider: needs vendor pseudo-elements, so it is styled here rather than with utilities */.volume-slider { -webkit-appearance: none; appearance: none; flex: 1 1 auto; min-width: 0; height: 0.375rem; border-radius: 9999px; background: #e5e7eb; cursor: pointer; } .volume-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 1rem; height: 1rem; border-radius: 9999px; background: rgb(29 78 216); border: none; cursor: pointer; } .volume-slider::-moz-range-thumb { width: 1rem; height: 1rem; border-radius: 9999px; background: rgb(29 78 216); border: none; cursor: pointer; } .volume-slider:focus-visible { outline: 2px solid rgb(29 78 216); outline-offset: 2px; }</style>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+        <script>/* Pinegrow Interactions, do not remove */ (function(){try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { window.pgia_small_mq=typeof pgia_small_mq=='string'?pgia_small_mq:'(max-width:767px)';window.pgia_large_mq=typeof pgia_large_mq=='string'?pgia_large_mq:'(min-width:768px)';var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id') && document.documentElement.hasAttribute('data-pg-mobile')) {pgia_small_mq='(min-width:0)';pgia_large_mq='(min-width:99999px)'} pgcss+='@media ' + pgia_small_mq + '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';pgcss+='@media ' + pgia_large_mq + '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}})()</script>
+    </head>
+    <body class="text-gray-500"> 
+        <header id="site-header" class="site-header sticky top-0 z-50">
+            <nav class="py-2">
+                <div class="container mx-auto relative"> 
+                    <nav class="flex flex-wrap items-center px-4"> <a href="#" class="font-bold font-serif hover:text-opacity-75 inline-flex items-center leading-none mr-4 space-x-1 text-black text-xl uppercase"><span>Christian Korreng</span> </a> 
+                        <button class="hover:bg-secondary-500 hover:text-white ml-auto px-3 py-2 rounded text-secondary-500 lg:hidden" data-name="nav-toggler" data-pg-ia='{"l":[{"name":"NabMenuToggler","trg":"click","a":{"l":[{"t":"^nav|[data-name=nav-menu]","l":[{"t":"set","p":0,"d":0,"l":{"class.remove":"hidden"}}]},{"t":"#gt# span:nth-of-type(1)","l":[{"t":"tween","p":0,"d":0.2,"l":{"rotationZ":45,"yPercent":300}}]},{"t":"#gt# span:nth-of-type(2)","l":[{"t":"tween","p":0,"d":0.2,"l":{"autoAlpha":0}}]},{"t":"#gt# span:nth-of-type(3)","l":[{"t":"tween","p":0,"d":0.2,"l":{"rotationZ":-45,"yPercent":-300}}]}]},"pdef":"true","trev":"true"}]}' data-pg-ia-apply="$nav [data-name=nav-toggler]"> <span class="block border-b-2 border-current my-1 w-6"></span> <span class="block border-b-2 border-current my-1 w-6"></span> <span class="block border-b-2 border-current my-1 w-6"></span> 
+                        </button>                         
+                        <div class="hidden space-y-2 w-full lg:flex lg:items-center lg:space-x-4 lg:space-y-0 lg:w-auto grow" data-name="nav-menu"> 
+                            <div class="flex flex-col mx-auto lg:flex-row"> <a href="#home" class="hover:text-gray-400 lg:p-4 py-2 text-gray-500">Home</a>
+                                <a href="#about" class="hover:text-gray-400 lg:p-4 py-2 text-gray-500">About</a>
+                                <a href="#works" class="hover:text-gray-400 lg:p-4 py-2 text-gray-500">Works</a>
+                                <a href="#contact" class="hover:text-gray-400 lg:p-4 py-2 text-gray-500">Contact</a>
+                            </div>
+                            <div class="flex-wrap gap-2 inline-flex items-center py-1">
+                                <div class="cv-menu">
+                                    <button type="button" id="print-cv-btn" class="bg-blue-700 inline-block px-6 py-2 rounded text-white hover:bg-blue-900" aria-haspopup="true" aria-expanded="false" aria-controls="cv-menu-list">Print CV</button>
+                                    <div id="cv-menu-list" class="cv-menu-list" hidden>
+                                        <button type="button" class="cv-menu-item print-cv-lang" data-cv="CV/English/Christian_Korreng_CV_EN.pdf">English</button>
+                                        <button type="button" class="cv-menu-item print-cv-lang" data-cv="CV/German/Christian_Korreng_CV_DE.pdf" lang="de">Deutsch</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                         
+                    </nav>                     
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="home" class="bg-gray-100 relative text-center">
+                <div class="container mx-auto px-4 py-24">
+                    <div class="-mx-4 flex flex-wrap items-center justify-center space-y-6 lg:space-y-0">
+                        <div class="px-4 w-full md:w-auto xl:w-7/12"> 
+                            <h1 class="font-bold mb-2 text-4xl text-gray-900 md:leading-tight lg:leading-tight lg:text-5xl">Christian Korreng:</h1>
+                            <h1 class="font-bold mb-6 text-4xl text-gray-900 md:leading-tight lg:leading-tight lg:text-5xl">programming, design, music</h1>
+                            <p class="mb-1">Hey there!</p>
+                            <p class="mb-3">I am a Game Developer based in Baden-Württemberg, Germany.&nbsp;<br>My tools include  <a href="https://github.com/godotengine/godot" target="_blank" rel="noopener" class="text-blue-700">Godot</a>, <a href="https://www.unrealengine.com/" target="_blank" rel="noopener" class="text-blue-700">Unreal Engine</a>, <a href="https://github.com/blender/blender" target="_blank" rel="noopener" class="text-blue-700">Blender</a> and more.</p>
+                            <p class="mb-6">Check out my recent work below, or connect with me on social media.</p>
+                            <div class="flex-wrap inline-flex space-x-2"> <a href="https://x.com/chrisinator3000" aria-label="X (Twitter)" class="bg-blue-700 h-9 p-2 rounded-full text-white w-9 hover:bg-blue-900" target="_blank" rel="noopener"><svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <title>X</title>
+                                        <path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/>
+                                    </svg></a> <a href="https://github.com/Th3D0c0" aria-label="GitHub" class="bg-blue-700 h-9 p-2 rounded-full text-white w-9 hover:bg-blue-900" target="_blank" rel="noopener"><svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <title>GitHub</title>
+                                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                    </svg></a>
+                                <a href="https://www.linkedin.com/in/christian-korreng-204517373" aria-label="LinkedIn" class="bg-blue-700 h-9 p-2 rounded-full text-white w-9 hover:bg-blue-900" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50" fill="currentColor"> 
+                                        <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>                                         
+                                    </svg></a>
+                                <a href="mailto:ckorreng@yahoo.com" aria-label="Email" class="bg-blue-700 h-9 p-2 rounded-full text-white w-9 hover:bg-blue-900"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 88.86" fill="currentColor" class="pt-0.5">
+                                        <title>email</title>
+                                        <path d="M7.05,0H115.83a7.07,7.07,0,0,1,7,7.05V81.81a7,7,0,0,1-1.22,4,2.78,2.78,0,0,1-.66,1,2.62,2.62,0,0,1-.66.46,7,7,0,0,1-4.51,1.65H7.05a7.07,7.07,0,0,1-7-7V7.05A7.07,7.07,0,0,1,7.05,0Zm-.3,78.84L43.53,40.62,6.75,9.54v69.3ZM49.07,45.39,9.77,83.45h103L75.22,45.39l-11,9.21h0a2.7,2.7,0,0,1-3.45,0L49.07,45.39Zm31.6-4.84,35.46,38.6V9.2L80.67,40.55ZM10.21,5.41,62.39,47.7,112.27,5.41Z"/>
+                                    </svg></a>
+                            </div>                             
+                        </div>
+                        <img class="bg-white inline-flex mb-6 p-2 rounded-full shadow-xl w-72" alt="..." width="800" height="800" src="Images/Christian_Korreng2.JPG"/>
+                    </div>
+                </div>
+            </section>
+            <section id="about" class="py-24 text-gray-500">
+                <div class="container mx-auto px-4 relative">
+                    <div class="flex flex-wrap -mx-4  items-center">
+                        <div class="p-4 w-full lg:w-8/12">
+                            <h2 class="font-medium mb-2">A Little</h2>
+                            <h3 class="font-bold mb-2 text-5xl text-blue-700">About Me</h3>
+                            <p class="mb-6">My game development journey began in 2024 by creating a small first-person medieval game in Unreal Engine. Since then, I have developed several smaller projects using both Unreal and Godot. Outside of game development, my free time is spent producing music, coding, and creating 3D models. I am currently studying "Games and Immersive Media" at the Hochschule Furtwangen.</p>
+                            <p>You can check out my work below.</p>
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </section>
+            <div class="container mx-auto">
+                <div class="lg:mx-auto lg:w-7/12">
+                    <div class="flex items-center nowrap"> 
+                        <div class="bg-primary-500 flex-grow h-px max-w-full opacity-25"></div>                         
+                        <div class="px-10 w-auto"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="h-10 text-blue-700 w-10">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M7.05 14.121L4.93 16.243l2.828 2.828L19.071 7.757 16.243 4.93 14.12 7.05l1.415 1.414L14.12 9.88l-1.414-1.415-1.414 1.415 1.414 1.414-1.414 1.414-1.414-1.414-1.415 1.414 1.415 1.414-1.415 1.415L7.05 14.12zm9.9-11.313l4.242 4.242a1 1 0 0 1 0 1.414L8.464 21.192a1 1 0 0 1-1.414 0L2.808 16.95a1 1 0 0 1 0-1.414L15.536 2.808a1 1 0 0 1 1.414 0zM14.12 18.363l1.415-1.414 2.242 2.243h1.414v-1.414l-2.242-2.243 1.414-1.414L21 16.757V21h-4.242l-2.637-2.637zM5.636 9.878L2.807 7.05a1 1 0 0 1 0-1.415l2.829-2.828a1 1 0 0 1 1.414 0L9.88 5.635 8.464 7.05 6.343 4.928 4.929 6.343l2.121 2.12-1.414 1.415z"/>
+                            </svg>                             
+                        </div>                         
+                        <div class="bg-primary-500 flex-grow h-px max-w-full opacity-25"></div>                         
+                    </div>
+                </div>
             </div>
-        </section>
-
-        <main class="projects-section">
-            <h2>My Projects</h2>
-
-            <div class="project-card">
-                <h3>Project Title 1</h3>
-                <p>Description of the project goes here.</p>
-                <a href="#">View Project</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Project Title 2</h3>
-                <p>Description of the project goes here.</p>
-                <a href="#">View Project</a>
+            <section id="works" class="py-24 text-gray-500">
+                <div class="container mx-auto px-4 relative">
+                    <div class="mb-12">
+                        <h2 class="font-medium mb-2 text-gray-600">Some Of My Recent Projects</h2>
+                        <h3 class="font-bold text-5xl text-blue-700">Works</h3> 
+                    </div>                     
+                    <div class="-mx-4 flex flex-wrap"> 
+                        <div class="mb-12 px-4 w-full md:w-6/12"> <a class="block group open-modal-btn rounded-lg" href="#" data-target="modal-opengl"> <img src="Images/Screenshot%202026-03-11%20162726.jpg" alt="Screenshot of the custom OpenGL rendering engine" class="mb-6 rounded-xl group-hover:opacity-80"/> <h4 class="font-bold mb-2 text-gray-900 text-xl">Custom 3D Rendering Engine using OpenGL</h4> <p>A game engine developed with C++ using OpenGL</p> </a> 
+                        </div>
+                        <div class="mb-28 px-4 w-full md:-mt-16 md:w-6/12"> <a class="block group open-modal-btn rounded-lg" href="#" data-target="modal-rasterfari"> <img src="Images/Rasterizer.jpg" alt="Output of the Rasterfari software rasterizer" class="group-hover:opacity-80 mb-6 rounded-xl"/> <h4 class="font-bold mb-2 text-gray-900 text-xl">Rasterfari</h4> <p>A Software Rasterizer written in C.</p> </a> 
+                        </div>
+                        <div class="mb-12 pt-16 px-4 w-full md:w-6/12"> <a class="block group open-modal-btn rounded-lg" href="#" data-target="modal-geometry"> <img src="Images/Screenshot%202026-03-11%20163352.jpg" alt="Gameplay screenshot of Geometry Survivor" class="group-hover:opacity-80 mb-6 rounded-xl"/> <h4 class="font-bold mb-2 text-gray-900 text-xl">Geometry Survivor</h4> <p>A survivor-like game developed in two weeks as part of the entry assignment of our study program</p> </a> 
+                        </div>
+                        <div class="mb-28 px-4 w-full md:-mt-9 md:w-6/12"> <a class="block group open-modal-btn rounded-lg" href="#" data-target="modal-workflows"> <img src="Images/TrimSheet1.jpg" alt="Trim sheet texture work" class="group-hover:opacity-80 mb-6 rounded-xl"/> <h4 class="font-bold mb-2 text-gray-900 text-xl">Industry Workflows</h4> <p>Learning industry standard workflows such as trim sheets, texture atlases and more.</p> </a>
+                        </div>
+                        <div class="mb-12 pt-16 px-4 w-full md:w-6/12"> <a class="block group open-modal-btn rounded-lg" href="#" data-target="modal-project-5"> <img class="group-hover:opacity-80 mb-6 rounded-xl w-full" src="Images/Ableton.jpg" alt="Music production session in Ableton Live"/> <h4 class="font-bold mb-2 text-gray-900 text-xl">Music Creation</h4> <p>Small music samples from my games</p> </a>
+                        </div>
+                        <div class="mb-12 px-4 w-full md:-mt-9 md:w-6/12"> <a class="block group open-modal-btn rounded-lg" href="#" data-target="modal-project-6"> <img src="Images/Sound1Project_Cover.jpg" alt="Sound 1 Project cover art" class="group-hover:opacity-80 mb-6 rounded-xl w-full"/> <h4 class="font-bold mb-2 text-gray-900 text-xl">Sound 1 Project</h4> <p>A Godot game where the focus was the music, sound design and ambience.</p> </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container mx-auto">
+                <div class="lg:mx-auto lg:w-7/12">
+                    <div class="flex items-center nowrap"> 
+                        <div class="bg-primary-500 flex-grow h-px max-w-full opacity-25"></div>                         
+                        <div class="px-10 w-auto"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" class="h-10 text-blue-700 w-10">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M7.05 14.121L4.93 16.243l2.828 2.828L19.071 7.757 16.243 4.93 14.12 7.05l1.415 1.414L14.12 9.88l-1.414-1.415-1.414 1.415 1.414 1.414-1.414 1.414-1.414-1.414-1.415 1.414 1.415 1.414-1.415 1.415L7.05 14.12zm9.9-11.313l4.242 4.242a1 1 0 0 1 0 1.414L8.464 21.192a1 1 0 0 1-1.414 0L2.808 16.95a1 1 0 0 1 0-1.414L15.536 2.808a1 1 0 0 1 1.414 0zM14.12 18.363l1.415-1.414 2.242 2.243h1.414v-1.414l-2.242-2.243 1.414-1.414L21 16.757V21h-4.242l-2.637-2.637zM5.636 9.878L2.807 7.05a1 1 0 0 1 0-1.415l2.829-2.828a1 1 0 0 1 1.414 0L9.88 5.635 8.464 7.05 6.343 4.928 4.929 6.343l2.121 2.12-1.414 1.415z"/>
+                            </svg>                             
+                        </div>                         
+                        <div class="bg-primary-500 flex-grow h-px max-w-full opacity-25"></div>                         
+                    </div>
+                </div>
             </div>
         </main>
-
-        <footer>
-            <p>Contact me at: email@example.com</p>
+        <footer id="contact" class="bg-gray-900 bg-opacity-90 py-12 text-gray-400">
+            <div class="container mx-auto px-4 relative"> 
+                <div class="-mx-4 flex flex-wrap items-center"> 
+                    <div class="mr-auto p-4 w-full md:w-9/12 lg:w-8/12 xl:w-6/12"> 
+                        <h2 class="font-bold font-serif mb-4 text-3xl text-white">Interested To Work Together?</h2>
+                        <p>If you found my portfolio interesting and you want to connect with me, then the best way to reach out to me is my email. I am looking forward to talking with you!</p> 
+                    </div>                     
+                    <div class="p-4 w-full md:w-auto"> <a href="mailto:ckorreng@yahoo.com" class="bg-blue-700 inline-block px-6 py-2 rounded text-white hover:bg-blue-900">Get In Touch</a>
+                    </div>                     
+                </div>
+                <hr class="my-8 opacity-25">
+                <div class="-mx-4 flex flex-wrap items-center"> 
+                    <div class="p-4 w-full sm:w-6/12 lg:w-3/12 xl:w-4/12"> <a href="#" class="font-bold font-serif inline-flex items-center leading-none space-x-2 text-3xl text-blue-700 uppercase hover:text-opacity-90"> <span>Christian Korreng</span> </a> 
+                    </div>                     
+                    <div class="p-4 w-full sm:w-6/12 lg:flex-1 lg:order-last"> 
+                        <div class="flex-wrap inline-flex leading-none space-x-2"> <a href="https://x.com/chrisinator3000" class="border border-white hover:bg-white hover:text-gray-900 p-2 rounded-full text-white" aria-label="X (Twitter)" target="_blank" rel="noopener"> <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                                    <path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/>
+                                </svg></a> <a href="https://github.com/Th3D0c0" class="border border-white hover:bg-white hover:text-gray-900 p-2 rounded-full text-white" aria-label="GitHub" target="_blank" rel="noopener"> <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                </svg></a> <a href="https://www.linkedin.com/in/christian-korreng-204517373" class="border border-white hover:bg-white hover:text-gray-900 p-2 rounded-full text-white" aria-label="LinkedIn" target="_blank" rel="noopener"> <svg viewBox="0 0 50 50" fill="currentColor" class="h-5 w-5">
+                                    <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"/>
+                                </svg></a> <a href="mailto:ckorreng@yahoo.com" class="border border-white hover:bg-white hover:text-gray-900 p-2 rounded-full text-white" aria-label="Email"> <svg viewBox="0 0 122.88 88.86" fill="currentColor" class="h-5 w-5">
+                                    <path d="M7.05,0H115.83a7.07,7.07,0,0,1,7,7.05V81.81a7,7,0,0,1-1.22,4,2.78,2.78,0,0,1-.66,1,2.62,2.62,0,0,1-.66.46,7,7,0,0,1-4.51,1.65H7.05a7.07,7.07,0,0,1-7-7V7.05A7.07,7.07,0,0,1,7.05,0Zm-.3,78.84L43.53,40.62,6.75,9.54v69.3ZM49.07,45.39,9.77,83.45h103L75.22,45.39l-11,9.21h0a2.7,2.7,0,0,1-3.45,0L49.07,45.39Zm31.6-4.84,35.46,38.6V9.2L80.67,40.55ZM10.21,5.41,62.39,47.7,112.27,5.41Z"/>
+                                </svg></a>
+                        </div>
+                    </div>
+                    <div class="p-4 w-full sm:w-6/12 md:flex-1 lg:w-3/12">
+                        <a href="mailto:ckorreng@yahoo.com" class="hover:text-gray-400 text-white text-xl">ckorreng@yahoo.com</a>
+                    </div>                     
+                </div>                 
+            </div>             
         </footer>
+        <script src="pgia/lib/pgia.js"></script>
+        <div id="modal-opengl" class="bg-black bg-opacity-80 fixed flex hidden inset-0 items-center justify-center modal-overlay p-4 z-50 sm:p-6">
+            <div class="bg-white w-full max-w-4xl max-h-[90vh] rounded-xl shadow-2xl flex flex-col relative overflow-hidden">
+                <button class="close-modal-btn absolute top-4 right-4 text-gray-500 hover:text-gray-900 bg-white rounded-full p-1 z-10">
+                    <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div class="overflow-y-auto p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-blue-700 mb-4">Custom 3D Rendering Engine</h2>
+                    <div>
+                        <p>Over the summer of 2025 I started to learn C++ and<a href="https://www.opengl.org/" target="_blank" rel="noopener" class="text-blue-700">OpenGL</a>. I chose a game engine as the project of choice because it was a good opportunity to get to know the foundation of the tools we use as developers better.</p>
+                        <p class="mb-7">AI was used in this project to help with debugging, C++ syntax and understanding OpenGL functions.</p>
+                        <p><u>Features include:</u></p>
+                        <p>-Working lighting using simple Phong algorithm.</p>
+                        <p>-Experimental lighting using Forward+ tiling.</p>
+                        <p>-Planet Generator using Marching Cubes.</p>
+                        <p>-Asset importing using <a href="https://github.com/assimp/assimp" target="_blank" rel="noopener" class="text-blue-700">assimp</a>.</p>
+                        <p>-Shader permutation.</p>
+                        <p>-Particle system utilizing spatial partitioning.</p>
+                        <p>-Skybox</p>
+                        <p>-<a href="https://github.com/ocornut/imgui" target="_blank" rel="noopener" class="text-blue-700">Dear ImGui</a> for GUI</p>
+                        <p>-3D Model imports using assimp</p>
+                        <br>
+                        <p>GitHub Repository: <a href="https://github.com/Th3D0c0/OpenGL_Learning/tree/master" target="_blank" rel="noopener" class="text-blue-700">Link to GitHub Repository</a></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-rasterfari" class="bg-black bg-opacity-80 fixed flex hidden inset-0 items-center justify-center modal-overlay p-4 z-50 sm:p-6">
+            <div class="bg-white w-full max-w-4xl max-h-[90vh] rounded-xl shadow-2xl flex flex-col relative overflow-hidden">
+                <button class="close-modal-btn absolute top-4 right-4 text-gray-500 hover:text-gray-900 bg-white rounded-full p-1 z-10">
+                    <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div class="overflow-y-auto p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-blue-700 mb-4">Rasterfari: Custom Rasterizer written in C</h2>
+                    <div>
+                        <p class="mb-5">In the winter break of 2026 I wanted to learn more about how games render to the screen. So I decided to learn C and how to rasterize to a color buffer.</p>
+                        <p class="mb-5">AI was used to write the MVP matrices and to help with debugging</p>
+                        <p><u>Features include:</u></p>
+                        <p>-Triangle Rasterization using Barycentric Coordinates</p>
+                        <p class="mb-5">-Line Rasterization using Bresenham Algorithm</p>
+                        <p class="mb-5">GitHub Link:&nbsp;<a href="https://github.com/Th3D0c0/RasterFari" target="_blank" rel="noopener" class="text-blue-700">GitHub Link</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-geometry" class="bg-black bg-opacity-80 fixed flex hidden inset-0 items-center justify-center modal-overlay p-4 z-50 sm:p-6">
+            <div class="bg-white w-full max-w-4xl max-h-[90vh] rounded-xl shadow-2xl flex flex-col relative overflow-hidden">
+                <button class="close-modal-btn absolute top-4 right-4 text-gray-500 hover:text-gray-900 bg-white rounded-full p-1 z-10">
+                    <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div class="overflow-y-auto p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-blue-700 mb-4">Geometry Survivor: Survivor like Video Game</h2>
+                    <div>
+                        <p class="mb-5">When I started studying Games and Immersive Media, the first project was to make a small Video Game in <a href="https://www.unrealengine.com/" target="_blank" rel="noopener" class="text-blue-700">Unreal Engine</a>. We had two weeks and were working in a team of four.</p>
+                        <p class="mb-5">No AI was used in this project.</p>
+                        <p class="mb-3"><u>My contributions include:</u></p>
+                        <p>-Initial Map design</p>
+                        <p>-Enemy logic</p>
+                        <p>-Systems for easily changing enemy spawn rate/time</p>
+                        <p>-Boss&nbsp;</p>
+                        <p>-UI logic</p>
+                        <p>-Bug fixing</p>
+                        <br>
+                        <p>Itch.io Link:&nbsp;<a href="https://th3-d0c.itch.io/geometry-survive" target="_blank" rel="noopener" class="text-blue-700">Link to itch.io project</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-workflows" class="bg-black bg-opacity-80 fixed flex hidden inset-0 items-center justify-center modal-overlay p-4 z-50 sm:p-6">
+            <div class="bg-white w-full max-w-4xl max-h-[90vh] rounded-xl shadow-2xl flex flex-col relative overflow-hidden">
+                <button class="close-modal-btn absolute top-4 right-4 text-gray-500 hover:text-gray-900 bg-white rounded-full p-1 z-10">
+                    <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div class="overflow-y-auto p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-blue-700 mb-4">Learning Workflows</h2>
+                    <div>
+                        <p class="mb-7">In the winter break of 2026 I was starting to learn about industry practices as part of my personal studies.</p>
+                        <p><u>These studies include:</u></p>
+                        <p class="mb-2">-Trim Sheet Workflow</p>
+                        <img src="Images/TrimSheet1.jpg" loading="lazy" alt="Trim sheet workflow" class="mb-6 rounded-xl w-full">
+                        <p class="mb-2">-Character Creation</p>
+                        <div class="model-viewer-wrap">
+                            <model-viewer class="model-viewer-el" src="3D%20Models/Egg_web.glb" alt="Egg character model" camera-controls touch-action="pan-y" auto-rotate shadow-intensity="1" exposure="1" loading="lazy"></model-viewer>
+                            <div class="model-progress" hidden>
+                                <div class="model-progress-track">
+                                    <div class="model-progress-fill"></div>
+                                </div>
+                                <p class="model-progress-label">Loading 3D model&hellip;</p>
+                            </div>
+                            <p class="model-viewer-note">Drag to orbit &middot; scroll to zoom</p>
+                        </div>
+                        <hr class="my-8 opacity-25">
+                        <h3 class="font-bold mb-4 text-blue-700 text-xl">Project 3</h3>
+                        <p class="mb-5">The end assignment of the &quot;Project 3&quot; course of my Games and Immersive Media study program at HFU, made in a team of four. My part of the project was the visual assets and environments made in <a href="https://github.com/blender/blender" target="_blank" rel="noopener" class="text-blue-700">Blender</a>, as well as the title screen and the music.</p>
+                        <p class="mb-5">AI was used in this project for parts of the code, which was handled by other members of the team.</p>
+                        <p><u>Key characteristics:</u></p>
+                        <p class="mb-2">-Asset Creation</p>
+                        <img src="Images/Assets.jpg" loading="lazy" alt="Assets created for Project 3" class="mb-6 rounded-xl w-full">
+                        <p class="mb-2">-Modular environment creation</p>
+                        <img src="Images/Modular_Environments.jpg" loading="lazy" alt="Modular environment pieces created for Project 3" class="mb-6 rounded-xl w-full">
+                        <p class="mb-2">-Environment creation using vertex painting</p>
+                        <img src="Images/VertexPainting1.jpg" loading="lazy" alt="Environment created using vertex painting" class="mb-6 rounded-xl w-full">
+                        <img src="Images/VertexPainting2.jpg" loading="lazy" alt="Environment created using vertex painting" class="mb-6 rounded-xl w-full">
+                        <p>Itch.io Link:&nbsp;<a href="https://th3-d0c.itch.io/project-3" target="_blank" rel="noopener" class="text-blue-700">Itch.io </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-project-5" class="bg-black bg-opacity-80 fixed flex hidden inset-0 items-center justify-center modal-overlay p-4 z-50 sm:p-6">
+            <div class="bg-white w-full max-w-4xl max-h-[90vh] rounded-xl shadow-2xl flex flex-col relative overflow-hidden">
+                <button class="close-modal-btn absolute top-4 right-4 text-gray-500 hover:text-gray-900 bg-white rounded-full p-1 z-10">
+                    <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div class="overflow-y-auto p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-blue-700 mb-4">Music Creation</h2>
+                    <div>
+                        <p class="mb-5">As part of our Project 3 course, I had created 3 small pieces of music for the game.</p>
+                        <p class="mb-5">No AI was used in these.</p>
+                        <p class="mb-2"><u>Samples:</u></p>
+                        <div class="audio-sample">
+                            <p class="audio-sample-title">Main Theme</p>
+                            <audio class="audio-sample-player" controls preload="none" src="Audio/Project_3.mp3"></audio>
+                            <div class="audio-sample-volume">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M11 5 6 9H2v6h4l5 4V5zm5.54 1.46a1 1 0 0 0-1.42 1.42 5 5 0 0 1 0 7.07 1 1 0 1 0 1.42 1.41 7 7 0 0 0 0-9.9zm2.83-2.83a1 1 0 1 0-1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 1 0 1.41 1.41 11 11 0 0 0 0-15.55z"/>
+                                </svg>
+                                <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1" aria-label="Volume for Main Theme">
+                                <output>100%</output>
+                            </div>
+                        </div>
+                        <div class="audio-sample">
+                            <p class="audio-sample-title">Game Start</p>
+                            <audio class="audio-sample-player" controls preload="none" src="Audio/Project_3_Bass.mp3"></audio>
+                            <div class="audio-sample-volume">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M11 5 6 9H2v6h4l5 4V5zm5.54 1.46a1 1 0 0 0-1.42 1.42 5 5 0 0 1 0 7.07 1 1 0 1 0 1.42 1.41 7 7 0 0 0 0-9.9zm2.83-2.83a1 1 0 1 0-1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 1 0 1.41 1.41 11 11 0 0 0 0-15.55z"/>
+                                </svg>
+                                <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1" aria-label="Volume for Main Theme (Bass)">
+                                <output>100%</output>
+                            </div>
+                        </div>
+                        <div class="audio-sample">
+                            <p class="audio-sample-title">Start Menu Beat</p>
+                            <audio class="audio-sample-player" controls preload="none" src="Audio/StartMenuBeat.mp3"></audio>
+                            <div class="audio-sample-volume">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M11 5 6 9H2v6h4l5 4V5zm5.54 1.46a1 1 0 0 0-1.42 1.42 5 5 0 0 1 0 7.07 1 1 0 1 0 1.42 1.41 7 7 0 0 0 0-9.9zm2.83-2.83a1 1 0 1 0-1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 1 0 1.41 1.41 11 11 0 0 0 0-15.55z"/>
+                                </svg>
+                                <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1" aria-label="Volume for Start Menu Beat">
+                                <output>100%</output>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal-project-6" class="bg-black bg-opacity-80 fixed flex hidden inset-0 items-center justify-center modal-overlay p-4 z-50 sm:p-6">
+            <div class="bg-white w-full max-w-4xl max-h-[90vh] rounded-xl shadow-2xl flex flex-col relative overflow-hidden">
+                <button class="close-modal-btn absolute top-4 right-4 text-gray-500 hover:text-gray-900 bg-white rounded-full p-1 z-10">
+                    <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <div class="overflow-y-auto p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-blue-700 mb-4">Sound 1 Project: Music, Sound and Ambience</h2>
+                    <div>
+                        <p class="mb-5">A small game made in <a href="https://github.com/godotengine/godot" target="_blank" rel="noopener" class="text-blue-700">Godot</a> as the assignment for the Sound 1 module of my Games and Immersive Media study program. The focus of the project was the music, sound effects and ambience rather than the gameplay systems.</p>
+                        <p class="mb-5">No AI was used in this project.</p>
+                        <p><u>The focus of this project was:</u></p>
+                        <p>-Original music written for the game</p>
+                        <p>-Sound effects</p>
+                        <p class="mb-5">-Ambient soundscapes to build atmosphere</p>
+                        <p class="mb-2"><u>Samples:</u></p>
+                        <div class="audio-sample">
+                            <p class="audio-sample-title">Orchestral</p>
+                            <audio class="audio-sample-player" controls preload="none" src="Audio/Orchestral.mp3"></audio>
+                            <div class="audio-sample-volume">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M11 5 6 9H2v6h4l5 4V5zm5.54 1.46a1 1 0 0 0-1.42 1.42 5 5 0 0 1 0 7.07 1 1 0 1 0 1.42 1.41 7 7 0 0 0 0-9.9zm2.83-2.83a1 1 0 1 0-1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 1 0 1.41 1.41 11 11 0 0 0 0-15.55z"/>
+                                </svg>
+                                <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1" aria-label="Volume for Orchestral">
+                                <output>100%</output>
+                            </div>
+                        </div>
+                        <div class="audio-sample">
+                            <p class="audio-sample-title">Rave Music</p>
+                            <audio class="audio-sample-player" controls preload="none" src="Audio/Rave_Music.mp3"></audio>
+                            <div class="audio-sample-volume">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M11 5 6 9H2v6h4l5 4V5zm5.54 1.46a1 1 0 0 0-1.42 1.42 5 5 0 0 1 0 7.07 1 1 0 1 0 1.42 1.41 7 7 0 0 0 0-9.9zm2.83-2.83a1 1 0 1 0-1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 1 0 1.41 1.41 11 11 0 0 0 0-15.55z"/>
+                                </svg>
+                                <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="1" aria-label="Volume for Rave Music">
+                                <output>100%</output>
+                            </div>
+                        </div>
+                        <p class="mb-5">Available as a Windows and Linux download.</p>
+                        <p>Itch.io Link:&nbsp;<a href="https://th3-d0c.itch.io/sound-1-project" target="_blank" rel="noopener" class="text-blue-700">Link to itch.io project</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+    const openBtns = document.querySelectorAll('.open-modal-btn');
+    const closeBtns = document.querySelectorAll('.close-modal-btn');
+    const modals = document.querySelectorAll('.modal-overlay');
 
-    </div>
+    // Open Specific Modal
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            // Find which modal to open based on the data-target attribute
+            const targetId = btn.getAttribute('data-target');
+            const targetModal = document.getElementById(targetId);
+            
+            if (targetModal) {
+                targetModal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden'); // Lock background scroll
+            }
+        });
+    });
 
-</body>
+    // Reusable function to close a modal
+    const closeModal = (modal) => {
+        modal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden'); // Unlock background scroll
+        // Stop any sample that is still playing inside this modal
+        modal.querySelectorAll('audio').forEach(audio => audio.pause());
+    };
 
+    // Close Modal when clicking any X button
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Find the specific modal that contains this clicked button
+            const modalToClose = e.target.closest('.modal-overlay');
+            if (modalToClose) {
+                closeModal(modalToClose);
+            }
+        });
+    });
+
+    // Close Modal when clicking the dark background outside the box
+    modals.forEach(modal => {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal(modal);
+            }
+        });
+    });
+
+    // Close the mobile nav after tapping a section link.
+    // This clicks Pinegrow's own toggler rather than touching the `hidden` class
+    // directly, so the interaction's internal open/closed state stays in sync.
+    const navToggler = document.querySelector('[data-name="nav-toggler"]');
+    const navMenu = document.querySelector('[data-name="nav-menu"]');
+
+    if (navToggler && navMenu) {
+        navMenu.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', () => {
+                const togglerVisible = navToggler.offsetParent !== null; // only in the mobile layout
+                if (togglerVisible && !navMenu.classList.contains('hidden')) {
+                    navToggler.click();
+                }
+            });
+        });
+    }
+
+    // Sticky top bar: add a shadow once the page is scrolled away from the top
+    const siteHeader = document.getElementById('site-header');
+
+    if (siteHeader) {
+        const updateHeaderShadow = () => {
+            siteHeader.classList.toggle('is-scrolled', window.scrollY > 10);
+        };
+        window.addEventListener('scroll', updateHeaderShadow, { passive: true });
+        updateHeaderShadow();
+    }
+
+    // Print CV: load the chosen PDF off-screen and open the browser print dialog for it
+    const printCv = (cvUrl) => {
+        let handled = false;
+
+        // If the PDF cannot be printed directly, just open it in a new tab
+        const openInTab = () => {
+            if (handled) return;
+            handled = true;
+            window.open(cvUrl, '_blank', 'noopener');
+        };
+
+        const oldFrame = document.getElementById('cv-print-frame');
+        if (oldFrame) oldFrame.remove();
+
+        const frame = document.createElement('iframe');
+        frame.id = 'cv-print-frame';
+        frame.setAttribute('aria-hidden', 'true');
+        frame.style.cssText = 'position:fixed;width:0;height:0;border:0;visibility:hidden;';
+
+        frame.addEventListener('load', () => {
+            handled = true; // Set before print(), which blocks until the dialog closes
+            try {
+                frame.contentWindow.focus();
+                frame.contentWindow.print();
+            } catch (err) {
+                handled = false;
+                openInTab();
+            }
+        });
+        frame.addEventListener('error', openInTab);
+
+        frame.src = cvUrl;
+        document.body.appendChild(frame);
+
+        // Nothing loaded (file missing, or blocked on file://) - fall back to a tab
+        setTimeout(openInTab, 3000);
+    };
+
+    // CV language menu
+    const cvToggle = document.getElementById('print-cv-btn');
+    const cvMenu = document.getElementById('cv-menu-list');
+
+    if (cvToggle && cvMenu) {
+        const closeCvMenu = () => {
+            cvMenu.hidden = true;
+            cvToggle.setAttribute('aria-expanded', 'false');
+        };
+
+        cvToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const willOpen = cvMenu.hidden;
+            cvMenu.hidden = !willOpen;
+            cvToggle.setAttribute('aria-expanded', String(willOpen));
+        });
+
+        cvMenu.querySelectorAll('.print-cv-lang').forEach(item => {
+            item.addEventListener('click', () => {
+                closeCvMenu();
+                printCv(item.getAttribute('data-cv'));
+            });
+        });
+
+        // Close when clicking elsewhere or pressing Escape
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.cv-menu')) {
+                closeCvMenu();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !cvMenu.hidden) {
+                closeCvMenu();
+                cvToggle.focus();
+            }
+        });
+    }
+
+    // 3D model viewer: show download progress, since the model takes a while to arrive
+    document.querySelectorAll('model-viewer').forEach(viewer => {
+        const wrap = viewer.closest('.model-viewer-wrap');
+        if (!wrap) return;
+
+        const box = wrap.querySelector('.model-progress');
+        const fill = wrap.querySelector('.model-progress-fill');
+        const label = wrap.querySelector('.model-progress-label');
+        if (!box || !fill || !label) return;
+
+        viewer.addEventListener('progress', (e) => {
+            const progress = e.detail.totalProgress || 0;
+            const pct = Math.round(progress * 100);
+
+            box.hidden = false;
+            fill.style.width = pct + '%';
+            label.textContent = 'Loading 3D model… ' + pct + '%';
+
+            if (progress >= 1) {
+                setTimeout(() => { box.hidden = true; }, 500);
+            }
+        });
+
+        viewer.addEventListener('error', () => {
+            box.hidden = false;
+            fill.style.width = '0%';
+            label.textContent = 'The 3D model could not be loaded.';
+        });
+    });
+
+    // Audio samples: per-track volume slider, and only one track plays at a time
+    const samples = document.querySelectorAll('.audio-sample');
+
+    samples.forEach(sample => {
+        const audio = sample.querySelector('.audio-sample-player');
+        const slider = sample.querySelector('.volume-slider');
+        const readout = sample.querySelector('output');
+
+        if (!audio || !slider) return;
+
+        const applyVolume = () => {
+            audio.volume = parseFloat(slider.value);
+            if (readout) {
+                readout.textContent = Math.round(slider.value * 100) + '%';
+            }
+        };
+
+        slider.addEventListener('input', applyVolume);
+        applyVolume(); // Sync on load in case the browser restored a slider position
+
+        // Pause every other sample when this one starts
+        audio.addEventListener('play', () => {
+            document.querySelectorAll('.audio-sample-player').forEach(other => {
+                if (other !== audio) {
+                    other.pause();
+                }
+            });
+        });
+    });
+
+</script>
+    </body>
 </html>
