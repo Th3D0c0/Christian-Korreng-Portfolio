@@ -1,4 +1,4 @@
-Put the GERMAN CV in this folder.
+This folder holds the GERMAN CV.
 
 It must be named exactly:
 

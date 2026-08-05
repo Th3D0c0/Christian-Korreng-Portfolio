@@ -1,6 +1,9 @@
 # Hi there, I'm Christian Korreng 👋
 <img src="./Res/Img/Christian_Korreng2.jpg" alt="drawing" width="200"/>
 
+### 🌐 **[View my portfolio site →](https://th3d0c0.github.io/Christian-Korreng-Portfolio/)**
+The source for that site lives in this repository and is published with GitHub Pages from the `main` branch.
+
 
 ### A Student of Games and Immersive Media at Hochschule Furtwangen.
 #### I am currently a student at Hochschule Furtwangen (HFU), pursuing a degree in Games and Immersive Media. My focus is on graphics programming, 3D art and game audio — from writing renderers from scratch, to building environments in Blender, to scoring the games I work on.
@@ -33,7 +36,7 @@ Tools: Git, GitHub, Visual Studio Code
 
 ---------------------------------------------------------------------------------------------
 ### 🚀 My Projects
-Here's some of the work. This repository also holds my portfolio site, which covers each of these in more detail.
+Here's some of the work. My [portfolio site](https://th3d0c0.github.io/Christian-Korreng-Portfolio/) covers each of these in more detail, with screenshots, audio samples and a 3D model viewer.
 
 #### ***Custom 3D Rendering Engine:***  
 https://github.com/Th3D0c0/OpenGL_Learning  

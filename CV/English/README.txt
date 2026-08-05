@@ -1,4 +1,4 @@
-Put the ENGLISH CV in this folder.
+This folder holds the ENGLISH CV.
 
 It must be named exactly:
 
