@@ -1,2 +1,5 @@
 # Pinegrow editor backups - local history, not needed in the repo
 _pgbackup/
+
+# Untouched source media (HEVC originals) - kept locally, too large/unplayable for the web
+_originals/
