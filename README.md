@@ -74,7 +74,6 @@ Have a question or want to work together? Feel free to reach out!
 
 <p align="left">
 <a href="https://www.linkedin.com/in/christian-korreng-204517373/" target="_blank"><img align="center" src="https://img.icons8.com/?size=100&id=13930&format=png&color=FFFFFF" alt="linkedin" height="60" width="60" /></a>
-<a href="https://x.com/chrisinator3000" target="_blank"><img align="center" src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=FFFFFF" alt="x" height="60" width="60" /></a>
 <a href="https://discord.com/users/256726718050598912" target="_blank"><img align="center" src="https://img.icons8.com/?size=100&id=2mIgusGquJFz&format=png&color=FFFFFF" alt="discord" height="60" width="60" /></a>
 <a href="mailto:cmkorreng@gmail.com" target="_blank"><img align="center" src="https://img.icons8.com/?size=100&id=OumT4lIcOllS&format=png&color=FFFFFF" alt="email" height="60" width="60" /></a>
 </p>

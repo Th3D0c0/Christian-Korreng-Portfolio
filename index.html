@@ -11,16 +11,12 @@
         <link rel="canonical" href="https://th3d0c0.github.io/Christian-Korreng-Portfolio/">
         <!-- Link preview cards. These URLs must stay absolute - most scrapers will not resolve
              relative paths. They point at the live GitHub Pages site; if the site ever moves to
-             its own domain, update the three absolute URLs below and the canonical link above. -->
+             its own domain, update the two absolute URLs below and the canonical link above. -->
         <meta property="og:type" content="website">
         <meta property="og:title" content="Christian Korreng &mdash; Game Developer">
         <meta property="og:description" content="Game developer based in Baden-W&uuml;rttemberg, Germany. Working with Godot, Unreal Engine and Blender, with a focus on graphics programming, 3D art and game audio.">
         <meta property="og:image" content="https://th3d0c0.github.io/Christian-Korreng-Portfolio/Images/Christian_Korreng2.JPG">
         <meta property="og:url" content="https://th3d0c0.github.io/Christian-Korreng-Portfolio/">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Christian Korreng &mdash; Game Developer">
-        <meta name="twitter:description" content="Game developer based in Baden-W&uuml;rttemberg, Germany. Working with Godot, Unreal Engine and Blender, with a focus on graphics programming, 3D art and game audio.">
-        <meta name="twitter:image" content="https://th3d0c0.github.io/Christian-Korreng-Portfolio/Images/Christian_Korreng2.JPG">
         <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
         <style>/* Smooth in-page navigation */html { scroll-behavior: smooth; } /* Keep section headings clear of the sticky bar when jumped to */#home, #about, #works, #contact { scroll-margin-top: 5rem; } @media (prefers-reduced-motion: reduce) { html {  scroll-behavior: auto; } } /* Sticky top bar */.site-header { background-color: #fff; transition: box-shadow 0.2s ease; } .site-header.is-scrolled { box-shadow: 0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px rgb(0 0 0 / 0.06); } /* CV language dropdown */.cv-menu { position: relative; } .cv-menu-list { position: absolute; right: 0; top: calc(100% + 0.5rem); min-width: 100%; padding: 0.25rem; background: #fff; border: 1px solid #e5e7eb; border-radius: 0.375rem; box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); z-index: 60; } .cv-menu-list[hidden] { display: none; } .cv-menu-item { display: block; width: 100%; padding: 0.5rem 0.75rem; border: 0; border-radius: 0.25rem; background: none; color: #374151; text-align: left; white-space: nowrap; cursor: pointer; } .cv-menu-item:hover, .cv-menu-item:focus-visible { background: #f3f4f6; color: #111827; } /* 3D model viewer */.model-viewer-wrap { position: relative; margin-bottom: 1.5rem; } .model-progress { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(20rem, 80%); z-index: 2; pointer-events: none; } .model-progress[hidden] { display: none; } .model-progress-track { height: 0.5rem; border-radius: 9999px; background: #e5e7eb; overflow: hidden; } .model-progress-fill { width: 0%; height: 100%; border-radius: 9999px; background: rgb(29 78 216); transition: width 0.15s linear; } .model-progress-label { margin-top: 0.5rem; font-size: 0.8rem; color: #6b7280; text-align: center; } .model-viewer-el { display: block; width: 100%; height: 24rem; background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 0.5rem; --poster-color: #f3f4f6; } .model-viewer-note { font-size: 0.8rem; color: #6b7280; margin-top: 0.375rem; } /* Audio sample players (used inside project modals) */.audio-sample { border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 0.75rem 1rem; margin-bottom: 0.75rem; } .audio-sample-title { color: #111827; font-weight: 500; margin-bottom: 0.5rem; } .audio-sample-player { width: 100%; display: block; } .audio-sample-volume { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.625rem; } .audio-sample-volume svg { width: 1.15rem; height: 1.15rem; flex: none; color: #6b7280; } .audio-sample-volume output { font-size: 0.8rem; color: #6b7280; min-width: 3ch; text-align: right; } /* Volume slider: needs vendor pseudo-elements, so it is styled here rather than with utilities */.volume-slider { -webkit-appearance: none; appearance: none; flex: 1 1 auto; min-width: 0; height: 0.375rem; border-radius: 9999px; background: #e5e7eb; cursor: pointer; } .volume-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 1rem; height: 1rem; border-radius: 9999px; background: rgb(29 78 216); border: none; cursor: pointer; } .volume-slider::-moz-range-thumb { width: 1rem; height: 1rem; border-radius: 9999px; background: rgb(29 78 216); border: none; cursor: pointer; } .volume-slider:focus-visible { outline: 2px solid rgb(29 78 216); outline-offset: 2px; }</style>
         <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
@@ -63,10 +59,7 @@
                             <p class="mb-1">Hey there!</p>
                             <p class="mb-3">I am a Game Developer based in Baden-Württemberg, Germany.&nbsp;<br>My tools include  <a href="https://github.com/godotengine/godot" target="_blank" rel="noopener" class="text-blue-700">Godot</a>, <a href="https://www.unrealengine.com/" target="_blank" rel="noopener" class="text-blue-700">Unreal Engine</a>, <a href="https://github.com/blender/blender" target="_blank" rel="noopener" class="text-blue-700">Blender</a> and more.</p>
                             <p class="mb-6">Check out my recent work below, or connect with me on social media.</p>
-                            <div class="flex-wrap inline-flex space-x-2"> <a href="https://x.com/chrisinator3000" aria-label="X (Twitter)" class="bg-blue-700 h-9 p-2 rounded-full text-white w-9 hover:bg-blue-900" target="_blank" rel="noopener"><svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <title>X</title>
-                                        <path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/>
-                                    </svg></a> <a href="https://github.com/Th3D0c0" aria-label="GitHub" class="bg-blue-700 h-9 p-2 rounded-full text-white w-9 hover:bg-blue-900" target="_blank" rel="noopener"><svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <div class="flex-wrap inline-flex space-x-2"> <a href="https://github.com/Th3D0c0" aria-label="GitHub" class="bg-blue-700 h-9 p-2 rounded-full text-white w-9 hover:bg-blue-900" target="_blank" rel="noopener"><svg role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <title>GitHub</title>
                                         <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
                                     </svg></a>
@@ -161,9 +154,7 @@
                     <div class="p-4 w-full sm:w-6/12 lg:w-3/12 xl:w-4/12"> <a href="#" class="font-bold font-serif inline-flex items-center leading-none space-x-2 text-3xl text-blue-700 uppercase hover:text-opacity-90"> <span>Christian Korreng</span> </a> 
                     </div>                     
                     <div class="p-4 w-full sm:w-6/12 lg:flex-1 lg:order-last"> 
-                        <div class="flex-wrap inline-flex leading-none space-x-2"> <a href="https://x.com/chrisinator3000" class="border border-white hover:bg-white hover:text-gray-900 p-2 rounded-full text-white" aria-label="X (Twitter)" target="_blank" rel="noopener"> <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
-                                    <path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/>
-                                </svg></a> <a href="https://github.com/Th3D0c0" class="border border-white hover:bg-white hover:text-gray-900 p-2 rounded-full text-white" aria-label="GitHub" target="_blank" rel="noopener"> <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+                        <div class="flex-wrap inline-flex leading-none space-x-2"> <a href="https://github.com/Th3D0c0" class="border border-white hover:bg-white hover:text-gray-900 p-2 rounded-full text-white" aria-label="GitHub" target="_blank" rel="noopener"> <svg viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
                                     <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
                                 </svg></a> <a href="https://www.linkedin.com/in/christian-korreng-204517373" class="border border-white hover:bg-white hover:text-gray-900 p-2 rounded-full text-white" aria-label="LinkedIn" target="_blank" rel="noopener"> <svg viewBox="0 0 50 50" fill="currentColor" class="h-5 w-5">
                                     <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"/>
@@ -189,8 +180,7 @@
                 <div class="overflow-y-auto p-6 md:p-10">
                     <h2 class="text-3xl font-bold text-blue-700 mb-4">Custom 3D Rendering Engine</h2>
                     <div>
-                        <p>Over the summer of 2025 I started to learn C++ and<a href="https://www.opengl.org/" target="_blank" rel="noopener" class="text-blue-700">OpenGL</a>. I chose a game engine as the project of choice because it was a good opportunity to get to know the foundation of the tools we use as developers better.</p>
-                        <p class="mb-7">AI was used in this project to help with debugging, C++ syntax and understanding OpenGL functions.</p>
+                        <p class="mb-7">Over the summer of 2025 I started to learn C++ and<a href="https://www.opengl.org/" target="_blank" rel="noopener" class="text-blue-700">OpenGL</a>. I chose a game engine as the project of choice because it was a good opportunity to get to know the foundation of the tools we use as developers better.</p>
                         <p><u>Features include:</u></p>
                         <p>-Working lighting using simple Phong algorithm.</p>
                         <p>-Experimental lighting using Forward+ tiling.</p>
@@ -219,7 +209,6 @@
                     <h2 class="text-3xl font-bold text-blue-700 mb-4">Rasterfari: Custom Rasterizer written in C</h2>
                     <div>
                         <p class="mb-5">In the winter break of 2026 I wanted to learn more about how games render to the screen. So I decided to learn C and how to rasterize to a color buffer.</p>
-                        <p class="mb-5">AI was used to write the MVP matrices and to help with debugging</p>
                         <p><u>Features include:</u></p>
                         <p>-Triangle Rasterization using Barycentric Coordinates</p>
                         <p class="mb-5">-Line Rasterization using Bresenham Algorithm</p>
@@ -239,7 +228,6 @@
                     <h2 class="text-3xl font-bold text-blue-700 mb-4">Geometry Survivor: Survivor like Video Game</h2>
                     <div>
                         <p class="mb-5">When I started studying Games and Immersive Media, the first project was to make a small Video Game in <a href="https://www.unrealengine.com/" target="_blank" rel="noopener" class="text-blue-700">Unreal Engine</a>. We had two weeks and were working in a team of four.</p>
-                        <p class="mb-5">No AI was used in this project.</p>
                         <p class="mb-3"><u>My contributions include:</u></p>
                         <p>-Initial Map design</p>
                         <p>-Enemy logic</p>
@@ -281,7 +269,6 @@
                         <hr class="my-8 opacity-25">
                         <h3 class="font-bold mb-4 text-blue-700 text-xl">Project 3</h3>
                         <p class="mb-5">The end assignment of the &quot;Project 3&quot; course of my Games and Immersive Media study program at HFU, made in a team of four. My part of the project was the visual assets and environments made in <a href="https://github.com/blender/blender" target="_blank" rel="noopener" class="text-blue-700">Blender</a>, as well as the title screen and the music.</p>
-                        <p class="mb-5">AI was used in this project for parts of the code, which was handled by other members of the team.</p>
                         <p><u>Key characteristics:</u></p>
                         <p class="mb-2">-Asset Creation</p>
                         <img src="Images/Assets.jpg" loading="lazy" alt="Assets created for Project 3" class="mb-6 rounded-xl w-full">
@@ -306,7 +293,6 @@
                     <h2 class="text-3xl font-bold text-blue-700 mb-4">Music Creation</h2>
                     <div>
                         <p class="mb-5">As part of our Project 3 course, I had created 3 small pieces of music for the game.</p>
-                        <p class="mb-5">No AI was used in these.</p>
                         <p class="mb-2"><u>Samples:</u></p>
                         <div class="audio-sample">
                             <p class="audio-sample-title">Main Theme</p>
@@ -356,7 +342,6 @@
                     <h2 class="text-3xl font-bold text-blue-700 mb-4">Sound 1 Project: Music, Sound and Ambience</h2>
                     <div>
                         <p class="mb-5">A small game made in <a href="https://github.com/godotengine/godot" target="_blank" rel="noopener" class="text-blue-700">Godot</a> as the assignment for the Sound 1 module of my Games and Immersive Media study program. The focus of the project was the music, sound effects and ambience rather than the gameplay systems.</p>
-                        <p class="mb-5">No AI was used in this project.</p>
                         <p><u>The focus of this project was:</u></p>
                         <p>-Original music written for the game</p>
                         <p>-Sound effects</p>
